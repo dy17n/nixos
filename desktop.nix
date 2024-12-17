@@ -5,12 +5,12 @@
       yofi
       kitty
     ]; 
-  }
+  };
 
-  services.xserver.displayManager.sddm.enable = true;
+  services.greetd.enable = true;
   programs.wayfire.enable = true;
   programs.wayfire.plugins = [];
-  home.file."/.config/wayfire.ini".source = ./wayfire.ini;
+  home-manager.users.dylan.home.file."/.config/wayfire.ini".source = ./wayfire.ini;
 
   programs.firefox.enable = true;
 }
