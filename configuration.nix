@@ -71,7 +71,7 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
   users.mutableUsers = false;
-  users.Users.dylan = {
+  users.users.dylan = {
     initialPassword = "7538";
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
