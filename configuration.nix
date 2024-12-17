@@ -45,7 +45,6 @@
 
   environment.systemPackages = with pkgs; [
     vim 
-    kitty
     git-credential-manager
   ];
 
