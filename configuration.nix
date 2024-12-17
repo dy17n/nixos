@@ -39,6 +39,12 @@
     wayfire = {
       enable = true;
     };
+    git = {
+      enable = true;
+    };
+    firefox = { 
+      enable = true;
+    };
   }; 
 
   # Configure keymap in X11
@@ -70,7 +76,7 @@
 
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    git
+    kitty
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
