@@ -45,7 +45,7 @@
       config = {
 	user.email = "krecker@keemail.me";
 	user.name = "dy17n";
-	credential.credentialStore = "gpg";
+	credential.credentialStore = "plaintext";
       };
     };
     firefox = { 
@@ -73,6 +73,7 @@
   users.mutableUsers = false;
   users.users.dylan = {
     initialPassword = "7538";
+    isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
     ];
@@ -81,6 +82,7 @@
   environment.systemPackages = with pkgs; [
     vim 
     kitty
+    git-credential-manager
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
