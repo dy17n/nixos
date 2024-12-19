@@ -4,6 +4,9 @@
     home.packages = with pkgs; [
       yofi
       feh
+      pavucontrol
+      grim
+      discord
     ]; 
   };
    
@@ -17,6 +20,11 @@
   home-manager.users.dylan.programs.kitty = {
     enable = true;
     themeFile = "Solarized_Dark";
+    font = {
+      package = pkgs.iosevka;
+      name = "Iosevka";
+      size = 12;
+    };
   };
  
   home-manager.users.dylan.programs.wpaperd = {
@@ -31,8 +39,9 @@
  
  
   programs.wayfire.enable = true;
-  programs.wayfire.plugins = [];
+  programs.wayfire.plugins = with pkgs.wayfirePlugins; [wayfire-shadows];
   home-manager.users.dylan.home.file."/.config/wayfire.ini".source = ./wayfire.ini;
   
   programs.firefox.enable = true;
+  programs.steam.enable = true;
 }
