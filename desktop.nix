@@ -7,6 +7,7 @@
       pavucontrol
       grim
       discord
+      qtractor
     ]; 
   };
    
@@ -41,7 +42,12 @@
   programs.wayfire.enable = true;
   programs.wayfire.plugins = with pkgs.wayfirePlugins; [wayfire-shadows];
   home-manager.users.dylan.home.file."/.config/wayfire.ini".source = ./wayfire.ini;
-  
+  home-manager.users.dylan.home.file." /.config/yofi/yofi.config".source = ./yofi.config;
+  services.pipewire = {
+    enable = true;
+    jack.enable = true;
+  };
+ 
   programs.firefox.enable = true;
   programs.steam.enable = true;
 }
