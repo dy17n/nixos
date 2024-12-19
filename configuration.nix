@@ -72,7 +72,8 @@
   users.users.dylan = {
     initialPassword = "7538";
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" ];
+    shell = pkgs.zsh;
   };
 
   environment.systemPackages = with pkgs; [
