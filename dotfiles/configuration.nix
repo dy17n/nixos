@@ -29,19 +29,6 @@
       "/etc/machine-id"
       { file = "/var/keys/secret_file"; parentDirectory = { mode = "u=rwx,g=,o="; }; }
     ];
-    users.dylan= {
-      directories = [
-        "Downloads"
-        "Music"
-        "Pictures"
-        "Documents"
-        "Videos"
-        ".local/share/direnv"
-      ];
-      files = [
-        ".screenrc"
-      ];
-    };
   };
 
   programs = {

@@ -13,9 +13,9 @@
         modules = [
           impermanence.nixosModules.impermanence
           home-manager.nixosModules.home-manager
-          ./configuration.nix
-	  ./hardware-configuration.nix
-	  ./desktop.nix
+          ./dotfiles/configuration.nix
+	  ./dotfiles/hardware-configuration.nix
+	  ./dotfiles/desktop.nix
         ];
       };
     };
