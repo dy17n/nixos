@@ -6,9 +6,11 @@
         "Pictures"
         "Documents"
         "Videos"
-        ".local/share/direnv"
+        ".local/share/steam"
         ".config/discord"
 	".config/chromium" 
+	".steam"
+        ".local/state/wireplumber/"
       ];
       files = [
       ];
@@ -30,9 +32,9 @@
    
   services.greetd.enable = true;
   services.greetd.settings = {
-    package = pkgs.greetd.wlgreet;
+    package = pkgs.greetd.greetd;
     default_session = {
-      command = "${pkgs.greetd.wlgreet}/bin/wlgreet --command wayfire";
+      command = "${pkgs.greetd.greetd}/bin/agreety --cmd wayfire";
     };
   };
   
@@ -62,9 +64,11 @@
   home-manager.users.dylan.home.file."/.config/wayfire.ini".source = ./wayfire.ini;
   home-manager.users.dylan.home.file."/.config/yofi/yofi.config".source = ./yofi.config;
 
+  hardware.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     jack.enable = true;
+    wireplumber.enable = true;
   };
  
   programs.chromium.enable = true;
